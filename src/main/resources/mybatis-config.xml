@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <!-- 实体类,简称 -设置别名 -->  
+    <typeAliases>
+		<!-- 通过package, 可以直接指定package的名字， mybatis会自动扫描你指定包下面的javabean, 并且默认设置一个别名，默认的名字为： 
+			javabean 的首字母小写的非限定类名来作为它的别名。 也可在javabean 加上注解@Alias 来自定义别名， 例如： @Alias(user)--> 
+		<package name="com.quicksand.entity"/>
+		 
+    	<!-- 单个设置别名   -->
+        <!-- <typeAlias alias="JswyCoupon" type="com.quicksand.entity.JswyCoupon" /> -->
+    </typeAliases>
+      
+    <!--
+    	描述:实体接口映射资源 
+    	说明 ：如果xxMapper.xml配置文件放在和xxMapper.java统一目录下，mappers也可以省略，因为org.mybatis.spring.mapper.MapperFactoryBean默认会去查找与xxMapper.java相同目录和名称的xxMapper.xml
+    	可以在这里配置,也可以配置到spring-mybatis文件中
+    --> 
+    <!-- 
+    <mappers>  
+        <mapper resource="com/quicksand/mapper/JswyCouponMapper.xml" />  
+    </mappers> 
+    -->
+</configuration> 
