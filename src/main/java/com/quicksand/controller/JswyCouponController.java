@@ -21,6 +21,8 @@ public class JswyCouponController {
 	@Autowired
 	private JswyCouponService jswyCouponService;
 	
+
+	
 	@RequestMapping(params="coupon")
 	public ModelAndView index(HttpServletRequest request) {
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring-mvc-task.xml");
