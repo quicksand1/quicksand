@@ -21,12 +21,9 @@ public class JswyCouponController {
 	@Autowired
 	private JswyCouponService jswyCouponService;
 	
-
-	
 	@RequestMapping(params="coupon")
 	public ModelAndView index(HttpServletRequest request) {
-		ApplicationContext context=new ClassPathXmlApplicationContext("spring-mvc-task.xml");
-		System.out.println("任务已启动...");
+		
 		String redhat= request.getParameter("redhat");
 		System.out.println("进来了 参数："+redhat);
 		JswyCoupon coupon=new JswyCoupon();

@@ -10,7 +10,7 @@
                         http://www.springframework.org/schema/mvc  
                         http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
     <!-- 自动扫描 -->  
-    <context:component-scan base-package="com.quicksand" />  
+    <context:component-scan base-package="com.quicksand" />
     
     <!-- 引入配置文件 -->  
     <bean id="propertyConfigurer"  
@@ -51,17 +51,17 @@
         <property name="configLocation" value="classpath:mybatis-config.xml" />   
         <!-- 自动扫描mapping.xml文件-->
         <property name="mapperLocations" value="classpath:com/quicksand/mapper/*.xml"></property>  
-    </bean>  
+    </bean>
   
     <!-- 自动扫描加载(dao)Sql映射文件/接口  basePackage:指定sql映射文件/接口所在的包-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
         <property name="basePackage" value="com.quicksand.dao" />  
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
-    </bean>  
+    </bean>
   
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->  
     <bean id="transactionManager"  
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
-        <property name="dataSource" ref="dataSource" />  
+        <property name="dataSource" ref="dataSource" />
     </bean>  
     </beans>
