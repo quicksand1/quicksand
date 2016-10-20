@@ -1,12 +1,10 @@
 package com.quicksand.dao;
 
-import org.apache.ibatis.annotations.Insert;
+
 import org.springframework.stereotype.Repository;
 
-import com.quicksand.entity.Account;
+import com.quicksand.entity.SysAccount;
 
 @Repository
-public interface AccountRepository {
-	@Insert("insert into Account(loginName,loginPwd,state,isAffect,createTime,createUser) values(#{loginName},#{loginPwd},#{state},#{isAffect},#{createTime},#{createUser})")
-	public void save(Account entity);
+public interface AccountRepository extends BaseRepository<SysAccount, Long> {
 }

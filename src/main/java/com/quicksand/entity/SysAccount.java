@@ -7,11 +7,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Sys_Account")
-public class Account {
+public class SysAccount {
 	private Long id;
 	private String loginName;
 	private String loginPwd;
-	private Short state;
+	private Integer state;
 	private Boolean isAffect;
 	private Date createTime;
 	private String createUser;
@@ -33,10 +33,10 @@ public class Account {
 	public void setLoginPwd(String loginPwd) {
 		this.loginPwd = loginPwd;
 	}
-	public Short getState() {
+	public Integer getState() {
 		return state;
 	}
-	public void setState(Short state) {
+	public void setState(Integer state) {
 		this.state = state;
 	}
 	public Boolean getIsAffect() {

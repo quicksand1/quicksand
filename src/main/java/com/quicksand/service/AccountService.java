@@ -1,7 +1,7 @@
 package com.quicksand.service;
 
-import com.quicksand.entity.Account;
+import com.quicksand.entity.SysAccount;
 
-public interface AccountService {
-	public int save(Account entity);
+public interface AccountService extends BaseService<SysAccount, Long> {
+//	public int insert(SysAccount entity);
 }

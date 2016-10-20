@@ -18,6 +18,7 @@ public class MapperInterceptor implements Interceptor{
 	      String mapperSQL = ms.getBoundSql(parameter).getSql();
 	      BoundSql boundSQL = ms.getBoundSql(parameter);
 	      System.out.println(ms.getResource());
+	      
 	      /*Class<?> entityclazz = MappedStatmentHelper.getEntityClazz(ms.getResource());
 	      queryArgs[0] = MappedStatmentHelper.setMSReturnSetMap(ms, entityclazz);
 	      

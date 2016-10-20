@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Sys_Option")
-public class Option {
+public class SysOption {
 	private Long id;
 	private Integer optionType;
 	private String showText;

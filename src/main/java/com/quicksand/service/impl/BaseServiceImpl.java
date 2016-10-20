@@ -10,9 +10,9 @@ public class BaseServiceImpl<T,PK> implements BaseService<T,PK> {
 	@Autowired
 	protected BaseRepository<T, PK> repository; 
 	
-	public int save(T entity) {
+	public int insert(T entity) {
 		// TODO Auto-generated method stub
-		return repository.save(entity);
+		return repository.insert(entity);
 	}
 
 	public int update(T entity) {
