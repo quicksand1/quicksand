@@ -1,4 +1,4 @@
-package com.quicksand.dao;
+package com.quicksand.core;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 
 import org.apache.ibatis.annotations.Update;
 
-public interface BaseRepository<T, PK> {
+public interface IBaseRepository<T, PK> {
 //	@Insert("MapperGD.find.entityById")
 //	public int save(T entity);
 //

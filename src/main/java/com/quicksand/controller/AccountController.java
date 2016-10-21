@@ -1,6 +1,9 @@
 package com.quicksand.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +15,7 @@ import com.quicksand.entity.SysAccount;
 import com.quicksand.entity.SysPerson;
 import com.quicksand.service.AccountService;
 import com.quicksand.service.SysPersonService;
+
 
 @Controller
 public class AccountController {
@@ -33,11 +37,17 @@ public class AccountController {
 		account.setCreateUser("system");
 		account.setIsAffect(true);
 		account.setState(0);
-		accountService.insert(account);
+		List<SysAccount> list=new ArrayList<SysAccount>();
+		for (int i = 1; i <= 100; i++) {
+			for (int j = 1; j <= 10000; j++) {
+				account.setLoginName(i+"-"+"-YG"+j);
+				list.add(account);
+			}
+			accountService.insertBatch(list);
+			list.clear();
+		}
 		accountService.findById(new Long(3));
-		
 		SysPerson person=new SysPerson();
-		
 		person.setName("hehe1");
 		person.setSex(false);
 		person.setAddress("北京");

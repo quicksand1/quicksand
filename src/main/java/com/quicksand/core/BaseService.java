@@ -1,14 +1,11 @@
-package com.quicksand.service.impl;
+package com.quicksand.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.quicksand.dao.BaseRepository;
-import com.quicksand.service.BaseService;
-
-public class BaseServiceImpl<T,PK> implements BaseService<T,PK> {
+public class BaseService<T,PK> implements IBaseService<T,PK> {
 
 	@Autowired
-	protected BaseRepository<T, PK> repository; 
+	protected IBaseRepository<T, PK> repository; 
 	
 	public int insert(T entity) {
 		// TODO Auto-generated method stub
